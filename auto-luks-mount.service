@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount Encrypted Volumes at Startup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-luks-mount.sh
+
+[Install]
+WantedBy=multi-user.target
